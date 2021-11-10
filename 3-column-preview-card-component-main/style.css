@@ -1,95 +1,132 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
 
+:root{
+    --prim-a: hsl(31, 77%, 52%);
+    --prim-b: hsl(184, 100%, 22%);
+    --prim-c: hsl(179, 100%, 13%);
 
-body {
-    background-color: hsl(0, 0%, 95%);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    font-size: 15px;
-    font-family: 'Lexend Deca',
-        sans-serif;
-    font-weight: 400;
+    --color-snow1: hsl(0, 0%, 95%);
+    --color-snow2: hsla(0, 0%, 100%, 0.75);
+
 }
 
-.container {
-    max-width: 960px;
-    margin: 0 auto;
-}
-
-.wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    border-radius: 12px;
-    margin: 2rem;
-    overflow: hidden;
-}
-
-.box1 {
-    background: hsl(31, 77%, 52%);
-}
-
-.box2 {
-    background: hsl(184, 100%, 22%);
-}
-
-.box3 {
-    background: hsl(179, 100%, 13%);
-}
-
-.box {
-    padding: 40px;
-}
-
-.box h2 {
-    font-family: 'Big Shoulders Display',
-        cursive;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /**/
+  body,
+  button {
+    font-family: "Lexend Deca", sans-serif;
+  }
+  
+  h3 {
+    font-family: "Big Shoulders Display", sans-serif;
     text-transform: uppercase;
-    color: hsl(0, 0%, 95%);
     font-size: 30px;
-}
-
-.box p {
-    color: hsla(0, 0%, 100%, 0.75);
+  }
+  
+  p {
+    font-size: 15px;
     line-height: 1.6;
-}
-
-.box a {
-    text-decoration: none;
-    background-color: hsl(0, 0%, 95%);
-    padding: 13px 27px;
-    border-radius: 26px;
-    margin-top: 60px;
-    display: inline-block;
-    border: 2px solid hsl(0, 0%, 95%);
-    transition: all .4s ease-in-out;
-}
-
-.box1 a {
-    color: hsl(31, 77%, 52%);
-}
-
-.box2 a {
-    color: hsl(184, 100%, 22%);
-}
-
-.box3 a {
-    color: hsl(179, 100%, 13%);
-}
-
-.box a:hover {
-    color: hsl(0, 0%, 95%);
-    background: transparent;
-}
-
-@media only screen and (max-width: 768px) {
-    .wrapper {
-        grid-template-columns: 1fr;
+  }
+  
+  .btn {
+    background-color: var(--color-snow1);
+    border: 2px solid var(--color-snow1);
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .bright {
+    background-color: var(--prim-a);
+    color: var(--color-snow1);
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .bright .btn {
+    color: var(--prim-a);
+  }
+  
+  .cyan-2 {
+    background-color: var(--prim-b);
+    color: var(--color-snow1);
+  }
+  
+  .cyan-2 .btn {
+    color: var(--prim-b);
+  }
+  
+  .cyan-3 {
+    background-color: var(--prim-c);
+    color: var(--color-snow1);
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .cyan-3 .btn {
+    color: var(--prim-c);
+  }
+  
+  .btn:hover {
+    background-color: transparent;
+    color: var(--color-snow1);
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  .card {
+    padding: 30px;
+  }
+  
+  .card img {
+    margin-bottom: 25px;
+  }
+  
+  .card h3 {
+    margin-bottom: 20px;
+  }
+  
+  .card p {
+    margin-bottom: 30px;
+  }
+  
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      max-width: 900px;
+      margin: auto;
     }
-}
-
-@media only screen and (max-width: 425px) {
-    .wrapper {
-        margin: 2rem .5rem;
+  
+    .bright-orange {
+      border-radius: 10px 0 0 10px;
     }
-}
+  
+    .cyan-1 {
+      border-radius: 0 10px 10px 0;
+    }
+  
+    .card {
+      padding: 45px;
+    }
+  
+    .card p {
+      margin-bottom: 80px;
+    }
+  }
